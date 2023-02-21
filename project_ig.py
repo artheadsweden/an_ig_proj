@@ -65,27 +65,27 @@ def check_password_strength():
 
 
 def check_pwd(another_pw=False):
-   valid = False
-   if another_pw:
-       choice = input(
-           f'Do you want to check another password\'s strength (y/n) : ')
-   else:
-       choice = input(
-           f'Do you want to check your password\'s strength (y/n) : ')
+    valid = False
+    if another_pw:
+        choice = input(
+            f'Do you want to check another password\'s strength (y/n) : ')
+    else:
+        choice = input(
+            f'Do you want to check your password\'s strength (y/n) : ')
 
-   while not valid:
-       if choice.lower() == 'y':
-           return True
-       elif choice.lower() == 'n':
-           print('Exiting...')
-           return False
-       else:
-           print(f'Invalid input...please try again. \n')
+    while not valid:
+        if choice.lower() == 'y':
+            return True
+        elif choice.lower() == 'n':
+            print('Exiting...')
+            return False
+        else:
+            print(f'Invalid input...please try again. \n')
 
 
 if __name__ == '__main__':
-   print(f'===== Welcome to Password Strength Checker =====')
-   check_pw = check_pwd()
-   while check_pw:
-       check_password_strength()
-       check_pw = check_pwd(True)
+    print(f'===== Welcome to Password Strength Checker =====')
+    check_pw = check_pwd()
+    while check_pw:
+        check_password_strength()
+        check_pw = check_pwd(True)
